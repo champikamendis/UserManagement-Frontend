@@ -19,7 +19,7 @@ const UserForm = (props) => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    const values = [firstName, lastName, email, dob, age, salary, department];
+    const values = [firstName, lastName, email, dob, salary, department];
     let errorMsg = '';
 
     const allFieldsFilled = values.every((field) => {
@@ -54,6 +54,12 @@ const UserForm = (props) => {
             [name]: value
           }));
         }
+        break;
+      case 'age':
+        setUser((prevState) => ({
+          ...prevState,
+          [name]: `${new Date().getFullYear() - new Date(dob).getFullYear()}`
+        }));
         break;
       default:
         setUser((prevState) => ({
@@ -117,9 +123,9 @@ const UserForm = (props) => {
             className="input-control"
             type="text"
             name="age"
-            value={dob ? `${new Date().getFullYear()- new Date(dob).getFullYear()}` : '0'}
-            placeholder="This is automatically filled with DOB"
             onChange={handleInputChange}
+            value={age}
+            placeholder="This is automatically filled with DOB"
           />
         </Form.Group>
         <Form.Group controlId="salary">
