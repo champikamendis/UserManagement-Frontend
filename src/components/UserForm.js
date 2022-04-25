@@ -33,7 +33,7 @@ const UserForm = (props) => {
         lastName,
         email,
         dob,
-        age, //calculation
+        age,
         salary,
         department //shoud take from the db
       };
@@ -117,8 +117,8 @@ const UserForm = (props) => {
             className="input-control"
             type="text"
             name="age"
-            value={age}
-            placeholder="Enter Age the employee"
+            value={dob ? `${new Date().getFullYear()- new Date(dob).getFullYear()}` : '0'}
+            placeholder="This is automatically filled with DOB"
             onChange={handleInputChange}
           />
         </Form.Group>
