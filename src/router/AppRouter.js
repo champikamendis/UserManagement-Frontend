@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+
 import Header from '../components/Header';
 import AddUser from '../components/AddUser';
 import UsersList from '../components/UsersList';
 import EditUser from '../components/EditUser';
 
 const AppRouter = () => {
-
   return (
     <BrowserRouter>
       <div>

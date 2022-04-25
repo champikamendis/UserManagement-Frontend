@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import UserForm from './UserForm';
 import { useParams } from 'react-router-dom';
+
+import UserForm from './UserForm';
 import { editUser, getAllUsers } from '../api/api';
 
 
