@@ -21,7 +21,7 @@ const UsersList = ({ history }) => {
 
   const removeUser = async id => {
     await deleteUser(id);
-    history.push('/');
+    window.location.reload(false);
   }
 
   return (
