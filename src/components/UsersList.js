@@ -26,7 +26,7 @@ const UsersList = ({ history }) => {
 
   return (
     <React.Fragment>
-      <div className="book-list">
+      <div className="user-list">
         {!_.isEmpty(userList) ? (
           userList.map((user) => (
             <User key={user.id} {...user} handleRemoveUser={handleRemoveUser} />

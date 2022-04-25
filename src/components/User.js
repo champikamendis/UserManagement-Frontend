@@ -16,10 +16,10 @@ const User = ({
   const history = useHistory();
 
   return (
-    <Card style={{ width: '18rem' }} className="book">
+    <Card style={{ width: '18rem' }} className="user">
       <Card.Body>
-        <Card.Title className="book-title">{firstName}</Card.Title>
-        <div className="book-details">
+        <Card.Title className="user-title">{firstName}</Card.Title>
+        <div className="user-details">
           <div>First Name: {firstName}</div>
           <div>Last Name: {lastName} </div>
           <div>Email: {email} </div>

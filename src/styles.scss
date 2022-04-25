@@ -71,23 +71,23 @@ h2 {
   margin-bottom: 50px;
 }
 
-.book-list {
+.user-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-.book {
+.user {
   margin: 10px;
   width: 288px;
   overflow: hidden;
 
-  .book-title {
+  .user-title {
     font-weight: bold;
   }
 
-  .book-details {
+  .user-details {
     margin-bottom: 1rem;
 
     & > div {
