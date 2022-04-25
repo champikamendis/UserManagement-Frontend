@@ -3,16 +3,15 @@ import UserForm from './UserForm';
 import { addUser } from '../api/api';
 
 const AddUser = ({ history }) => {
-
   const handleOnSubmit = (user) => {
     saveUser(user);
-    history.push('/');
   };
 
   const saveUser = async user => {
     try {
       const response =  await addUser(user);
       console.info(response);
+      history.push('/');
     } catch (error) {
       console.error(error);
     }

@@ -10,18 +10,18 @@ const UsersList = ({ history }) => {
     const fetchAllUsers = async() => {
       const users = await getAllUsers()
       setUserList(users);
-
     }
+
     fetchAllUsers();
-  }, [])
+  }, [history])
 
   const handleRemoveUser = (id) => {
     removeUser(id);
-    history.push('/');
   };
 
   const removeUser = async id => {
     await deleteUser(id);
+    history.push('/');
   }
 
   return (

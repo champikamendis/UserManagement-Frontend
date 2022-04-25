@@ -41,6 +41,7 @@ export const deleteUser = async id => {
         const res = await axios.delete(`http://localhost:4000/users/${id}`, headers)
         console.log(res);
         return res;  
+
     } catch (error) {
         console.error(error);
     }

@@ -20,11 +20,11 @@ const EditUser = ({ history }) => {
 
   const handleOnSubmit = (user) => {
     updateUser(user, id);
-    history.push('/');
   };
 
   const updateUser = async (user, id) => {
     await editUser(id, user);
+    history.push('/');
   }
 
   return (
